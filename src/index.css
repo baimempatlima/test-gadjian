@@ -1,13 +1,55 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(206, 250, 250) !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+:root {
+  --offcanvas-width: 270px !important;
+  --topNavbarHeight: 67px !important;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width) !important;
+}
+@media (min-width: 992px) {
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  .body {
+    overflow: auto !important;
+  }
+  .offcanvas-backdrop::before {
+    display: none !important;
+  }
+  .sidebar-nav {
+    transform: none !important ;
+    visibility: visible !important;
+    top: var(--topNavbarHeight) !important;
+    height: calc(100% - var(--topNavbarHeight)) !important;
+  }
+}
+
+.spani {
+  border: solid lightgrey 1px !important;
+  border-radius: 0% !important;
+  border-left: none !important;
+}
+.span2 {
+  border: solid lightgrey 1px !important;
+  border-radius: 0% !important;
+  border-right: none !important;
+}
+.buttonadd {
+  border: solid lightgrey 1px !important;
+  color: #fff !important;
+  border-radius: 0px !important;
 }
